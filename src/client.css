@@ -4,5 +4,23 @@ h1 {
     color: $red
 }
 
-
-
+.tussi{
+    padding: 20px 0;
+    background-color: orange;
+    border-color: black;
+    border-width:5px;
+    border-style: solid;
+    border-radius: 20px;
+    width: 200px;
+    text-align: center;
+    margin:20px;
+}
+.megacounter{
+    padding:50px;
+    width:300px;
+    background-color: orange;
+    position: absolute;
+    color:black;
+    bottom:5%;
+    right:5%;
+}
