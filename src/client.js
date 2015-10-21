@@ -7,105 +7,37 @@ import './client.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import axios from 'axios';
-
-function getTussit(){
-    return axios.get('/api/tussi').then ((response) => {
-        return response.data;
-    //console.log (response.data);
-
-    });
-
-}
 
 
+import { Router, Route, Link } from 'react-router';
 
-const HelloWorld = React.createClass({
-    render: function() {
-        return (
-            <div>
-                Hello {this.props.name}
-            </div>
-        );
-    }
-});
+import HelloWorld from './components/helloworld';
+import HelloWorldApp from './components/helloworldapp';
+import FrontPage from './components/frontpage';
+import Counter from './components/counter';
+import Greeter from './components/greeter';
 
-const HelloWorldApp = React.createClass({
-    getInitialState: function() {
-        return {
-            count: 0
-        };
-    },
+//Routteri
+const routes = (
+    <Router>
+        <Route component={HelloWorldApp}>
 
-componentDidMount: function(){
-    getTussit().then((data) => {
-        this.setState ({
-            names: data
-        });
-    });
-},
+            <Route path = "/" component={FrontPage}></Route>
+            <Route path = "/hello/:name" component={Greeter}></Route>
 
+        </Route>
 
-    render: function() {
-        const names = this.state.names;
-
-        return (
-            <div>
-                <h1>Lusso</h1>
-
-                {names.map((name, i) =>
-                    <HelloWorld key={i} name={name}/>
-                )}
-
-                <Counterizer
-                    count={this.state.count}
-                    onIncrementCounter={this.incrementCounter}/>
-
-
-            </div>
-        );
-    },
-
-    incrementCounter: function () {
-        this.setState({
-            count: this.state.count + 1
-        });
-    }
-});
-
-const Counterizer = React.createClass({
-    render: function() {
-        return (
-            <div className="tussi">
-                {this.props.count}
-
-                <button
-                    onClick={this.props.onIncrementCounter}>
-                    MOAR!
-                </button>
-            <div className="megacounter">
-                {this.props.count}
-            </div>
-
-            </div>
-
-
-        );
-    }
-});
-
-//megacounter
-class Counter extends React.Component{
-    render() {
-        return (
-            <div className="megacounter">
-                {this.props.count}
-            </div>
-        );
-    }
-};
+    </Router>
+);
 
 ReactDOM.render(
-    <HelloWorldApp names={['Tussi', 'Lussi']}/>,
+   routes,
     document.getElementById('app')
 );
+
+
+
+
+// vanhaa harjoitusta riviltä 121 <HelloWorldApp names={['Tussi', 'Lussi']}/>,
+// ecma6 <a href={`/hello/${this.props.name}`}> Huom. `merkintä`
+//{'/hello/' + this.props.name}>
