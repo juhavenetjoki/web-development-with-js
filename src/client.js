@@ -16,6 +16,7 @@ import HelloWorldApp from './components/helloworldapp';
 import FrontPage from './components/frontpage';
 import Counter from './components/counter';
 import Greeter from './components/greeter';
+import WeatherPage from './components/WeatherPage';
 
 //Routteri
 const routes = (
@@ -24,6 +25,7 @@ const routes = (
 
             <Route path = "/" component={FrontPage}></Route>
             <Route path = "/hello/:name" component={Greeter}></Route>
+            <Route path = "/weather" component={WeatherPage}></Route>
 
         </Route>
 

@@ -28,3 +28,14 @@ h1 {
 background-color:#ccc ;
 
 }
+.todo{
+
+    color: ;
+
+   &.done {
+
+    color:;
+
+    }
+}
+

@@ -2,16 +2,9 @@ import React from 'react';
 import { Link } from 'react-router';
 import Counterizer from './counterizer';
 import HelloWorld from './helloworld';
-import axios from 'axios';
+import api from '../api';
 
-function getTussit(){
-    return axios.get('/api/tussi').then ((response) => {
-        return response.data;
-    //console.log (response.data);
 
-    });
-
-}
 
 
 const HelloWorldApp = React.createClass({

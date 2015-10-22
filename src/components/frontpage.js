@@ -7,7 +7,7 @@ const FrontPage = React.createClass({
 
         const { name } = this.props.params;
         return(
-            <div class="">
+            <div>
             <h1>
             Tervetuloa etusivulle {name}
             </h1>

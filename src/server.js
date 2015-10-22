@@ -5,6 +5,7 @@ var url = require('url');
 var express = require('express');
 var webpack = require('webpack');
 var config = require('../webpack.config.dev');
+var axios = require('axios');
 
 var app = express();
 var compiler = webpack(config);
@@ -23,6 +24,23 @@ app.get('/api/tussi', function(req, res, next) {
         'tussi2',
         'tussi3',
         'tussi4',
+    ]);
+
+});
+
+//Hakee dataa
+app.get('/api/weather', function(req, res, next) {
+    axios.get('http://api.openweathermap.org/data/2.5/weather?q=London&appid=bd82977b86bf27fb59a04b61b657fb6f').then(function(response){
+        res.send(response.data);
+    });
+});
+
+
+
+app.post('/weather', function(req, res, next) {
+
+    nimet.push([
+
     ]);
 
 });
