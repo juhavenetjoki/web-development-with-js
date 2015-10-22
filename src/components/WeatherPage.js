@@ -9,11 +9,11 @@ const WeatherPage = React.createClass({
         return(
 
             <h1>
-            Weather {name}
+            Weather: London{name}
             </h1>
 
         );
-    }
+    },
     componentDidMount: function(){
     getWeather().then((data) => {
         this.setState ({

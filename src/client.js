@@ -23,9 +23,8 @@ const routes = (
     <Router>
         <Route component={HelloWorldApp}>
 
-            <Route path = "/" component={FrontPage}></Route>
-            <Route path = "/hello/:name" component={Greeter}></Route>
-            <Route path = "/weather" component={WeatherPage}></Route>
+            <Route path = "/" component={WeatherPage}></Route>
+
 
         </Route>
 
@@ -38,7 +37,8 @@ ReactDOM.render(
 );
 
 
-
+/*<Route path = "/hello/:name" component={Greeter}></Route>
+            <Route path = "/weather" component={WeatherPage}></Route>*/
 
 // vanhaa harjoitusta riviltä 121 <HelloWorldApp names={['Tussi', 'Lussi']}/>,
 // ecma6 <a href={`/hello/${this.props.name}`}> Huom. `merkintä`

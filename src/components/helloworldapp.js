@@ -47,6 +47,9 @@ render: function() {
             count: this.state.count + 1
         });
     }
+  //  const temperatureData = JSON.parse(document.getElementById("temp").innerHTML);
+   // return React.render(<WeatherApi temperatureData={temperatureData} />, document.body);
+
 });
 
 export default HelloWorldApp;
