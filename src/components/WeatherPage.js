@@ -4,6 +4,12 @@ import WeatherApi from '../WeatherApi';
 import Temperature from './Temperature';
 
 const WeatherPage = React.createClass({
+    getInitialState: function() {
+        return {
+        weather:{},
+        };
+    },
+
     render: function(){
 
         const { name } = this.props.params;
@@ -15,8 +21,10 @@ const WeatherPage = React.createClass({
         );
     },
     //<Temperature {...this.state} />
+    //componentWillMount: function(){
     componentDidMount: function(){
     WeatherApi.getWeather().then((data) => {
+        console.log(data);
         this.setState ({
             weather: data
         });

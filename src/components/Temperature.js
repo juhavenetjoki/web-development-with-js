@@ -17,9 +17,14 @@ const Temperature = React.createClass({
     },
 
     render: function() {
+        //console.log(this.props);
+
         return (
             <div>
-                { this.state.weather }
+
+            <p>{this.props.weather.base}
+            {this.props.weather.name}
+            </p>
             </div>
         );
     }
