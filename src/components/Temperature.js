@@ -1,25 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+//import WeatherApi from '../WeatherApi';
 
+//const Temperature = React.createClass({
 const Temperature = React.createClass({
     getInitialState: function() {
         return {
-        temp: '',
-        name: '',
-        weather:{}
+
+        /*temp: '',
+        name: '',*/
+        weather:{},
+        //temp:{}
+
+
         };
     },
 
     render: function() {
         return (
             <div>
-                <h1>
-                    <span class="temp">{ this.state.weather }</span>
-                    <span class="name">{ this.state.name }</span>
-                </h1>
-
+                { this.state.weather }
             </div>
         );
     }
 });
+//export default Temperature;
 export default Temperature;
+
+//<span class="name">{ this.state.name }</span>

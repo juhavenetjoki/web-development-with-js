@@ -37,13 +37,13 @@ app.get('/api/weather', function(req, res, next) {
 
 
 
-app.post('/weather', function(req, res, next) {
+/*app.post('/weather', function(req, res, next) {
 
     nimet.push([
 
     ]);
 
-});
+});*/
 
 app.get('*', function(req, res, next) {
   res.sendFile(path.join(__dirname, '/../web/index.dev.html'));

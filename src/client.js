@@ -17,6 +17,8 @@ import FrontPage from './components/frontpage';
 import Counter from './components/counter';
 import Greeter from './components/greeter';
 import WeatherPage from './components/WeatherPage';
+import Temperature from './components/Temperature';
+//import WeatherApi from './WeatherApi';
 
 //Routteri
 const routes = (
@@ -24,7 +26,6 @@ const routes = (
         <Route component={HelloWorldApp}>
 
             <Route path = "/" component={WeatherPage}></Route>
-
 
         </Route>
 
@@ -36,7 +37,7 @@ ReactDOM.render(
     document.getElementById('app')
 );
 
-
+//<Route component={HelloWorldApp}>
 /*<Route path = "/hello/:name" component={Greeter}></Route>
             <Route path = "/weather" component={WeatherPage}></Route>*/
 

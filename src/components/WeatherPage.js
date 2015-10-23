@@ -9,13 +9,12 @@ const WeatherPage = React.createClass({
         const { name } = this.props.params;
         return(
             <div>
-            <h1>
-            Weather: London{name}
-            </h1>
-            <Temperature {...this.state} />
+                <h1>Weather: London{name}</h1>
+                <Temperature {...this.state} />
             </div>
         );
     },
+    //<Temperature {...this.state} />
     componentDidMount: function(){
     WeatherApi.getWeather().then((data) => {
         this.setState ({
